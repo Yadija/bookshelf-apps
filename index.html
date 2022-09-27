@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- start jumbotron -->
+    <header class="jumbotron">
+        <h1 class="jumbotron-title">Bookshelf Apps</h1>
+    </header>
+    <!-- end jumbotron -->
+
+    <main>
+        <!-- start input section -->
+        <section class="input-section">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="inputBook">
+                <div class="input">
+                    <label for="inputBookTitle">Judul
+                        <input id="inputBookTitle" type="text" required>
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="inputBookAuthor">Penulis
+                        <input id="inputBookAuthor" type="text" required>
+                    </label>
+                </div>
+                <div class="input">
+                    <label for="inputBookYear">Tahun
+                        <input id="inputBookYear" type="number" required>
+                    </label>
+                </div>
+                <div class="input-inline">
+                    <label for="inputBookIsComplete">Selesai dibaca
+                        <input id="inputBookIsComplete" type="checkbox">
+                    </label>
+                </div>
+                <button id="bookSubmit" type="submit">Masukkan Buku ke rak <span id="confirmInput">Belum Selesai Dibaca</span></button>
+            </form>
+        </section>
+        <!-- end input section -->
+
+        <!-- start search section -->
+        <section class="search-section">
+            <h2>Cari Buku (Opsional)</h2>
+            <form id="searchBook">
+                <input id="searchBookTitle" type="text" placeholder="Tuliskan Judul Buku">
+            </form>
+        </section>
+        <!-- end search section -->
+
+        <div class="container">
+            <!-- start incomplete section -->
+            <section class="book-shelf">
+                <h2>Belum selesai dibaca</h2>
+                
+                <div id="incompleteBookshelfList" class="book-list"></div>
+            </section>
+            <!-- end incomplete section -->
+
+            <!-- start complete section -->
+            <section class="book-shelf">
+                <h2>Selesai dibaca</h2>
+                
+                <div id="completeBookshelfList" class="book-list"></div>
+            </section>
+            <!-- end complete section -->
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
